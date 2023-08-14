@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 import Logo from "../assets/technologies/astronaut.png";
+import Swal from "sweetalert2";
 
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -48,7 +49,11 @@ export default function Contact() {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you!");
+          Swal.fire({
+            title: 'Thank You !',
+            text: 'We have received your message and will respond to you as soon as possible.',
+            icon: 'success',
+          })
 
           setForm({
             name: "",
@@ -59,14 +64,18 @@ export default function Contact() {
         (error) => {
           setLoading(false);
           console.error(error);
-          alert("Something went wrong. Please try again.");
+          Swal.fire({
+            title: 'Something went wrong !',
+            text: 'Can\'t send your message right now, please try again later.',
+            icon: 'error'
+          })
         }
       );
   };
   return (
     <div
       id="contact"
-      className="pt-16 lg:pt-28 pb-20 w-full grid grid-cols-1 lg:grid-cols-10 max-w-7xl mx-auto"
+      className="pt-16 lg:pt-28 pb-20 w-full grid grid-cols-1 lg:grid-cols-10 max-w-7xl lg:mx-auto sm:px-6"
     >
       <motion.div
         initial={{

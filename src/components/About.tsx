@@ -64,7 +64,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           className="flex justify-center items-center"
         >
-          <div className="hero-img h-full w-full">
+          <div className="hero-img h-90 w-[90%]">
             <img
               src={Avatar}
               alt="img"

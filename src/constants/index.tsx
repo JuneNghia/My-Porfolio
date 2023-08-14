@@ -46,10 +46,10 @@ export const menuHeader = [
 export const experiences = [
   {
     title: "Frontend Developer",
-    company_name: "XXX",
+    company_name: "MHK",
     icon: '',
     iconBg: "#383E56",
-    date: "June 2022 - Present",
+    date: "January 15/2023 - Present",
     technology:
       "HTML, CSS, Javascript, Typescript, ReactJS, Redux-saga, Redux, TailwindCSS, Ant Design, MySQL, NodeJS, More... ",
     points: [

@@ -23,9 +23,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`sm:px-16 px-6 w-full flex items-center  fixed top-0 z-20  scroll-smooth ${
+      className={`sm:px-16 px-6 w-full flex items-center scroll-smooth ${
         scrolled
-          ? "h-16 duration-300 bg-transparent"
+          ? "h-16 duration-300 bg-white"
           : "h-24 duration-300 bg-black"
       }`}
     >
@@ -82,7 +82,7 @@ export default function Navbar() {
           {menuHeader.map((item, index) => (
             <div key={index} className="relative w-full py-3.5">
               <Link
-                className="hover:text-mgreen absolute left-1/2 opacity-0"
+                className="hover:text-green absolute left-1/2 opacity-0"
                 to={item.path}
               >
                 {item.title}
